@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP-Mi perfil</title>
+    <link rel="stylesheet" href="../CSS/Usuario.CSS">
+</head>
+
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../Imagenes/logo2.png" alt="Logo">
+            </div>
+            <div class="BUSCADOR">
+                <button id="boton-filtro">Filtro</button>
+                <form>
+                    <div id="search-filter" class="search-filter">
+                        <label for="BuscarTexto">Buscar texto:</label>
+                        <input type="text" id="BuscarTexto" name="BuscarTexto" placeholder="Escribe algo...">
+
+                        <label for="FechaInicial">Desde:</label>
+                        <input type="date" id="FechaInicial" name="FechaInicial">
+
+                        <label for="FechaFinal">Hasta:</label>
+                        <input type="date" id="FechaFinal" name="FechaFinal">
+
+                        <label for="categorias">Buscar por categoría:</label>
+                        <select id="categorias" name="categorias">
+                            <option value="All">Todas</option>
+                            <option value="CuidadosF">Cuidados</option>
+                            <option value="EntrenamientoF">Entrenamiento</option>
+                            <option value="Juguetes y accesoriosF">Juguetes y accesorios</option>
+                            <option value="AlimentacionF">Alimentación</option>
+                        </select>
+
+                        <button type="submit">Buscar</button>
+                    </div>
+                </form>
+                <input type="text" placeholder="Buscar..." id="buscador" name="buscador">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="user-profile">
+                <img src="../Imagenes/1.png" alt="Usuario" style="vertical-align: middle;">
+                <span style="vertical-align: middle;" id="NombreUsuario">Conchita</span>
+            </div>
+            <button id="toggle-menu-btn">☰</button>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!-- Menu-->
+        <aside class="sidebar-menu" id="sidebar">
+
+            <h3 class="sidebar-item">Menu</h3>
+            <a href="../HTML/Home.html" class="sidebar-button">Home</a>
+            <br>
+            <a href="../HTML/Chat.html" class="sidebar-button">Chat</a>
+            <br>
+            <a href="../HTML/Usuario.html" class="sidebar-button">Mi perfil</a>
+            <br>
+            <a href="../HTML/EditarUsuario.html" class="sidebar-button">Editar perfil</a>
+            <br>
+            <a href="../HTML/Tareas.html" class="sidebar-button">Tareas</a>
+            <br>
+            <a href="../HTML/Recompensas.html" class="sidebar-button">Recompensas</a>
+            <br>
+            <a href="../HTML/Inicio_sesion.html" class="sidebar-button">Cerrar sesion</a>
+        </aside>
+
+
+        <div class="perfil-container">
+            <!-- Seccion de informacion del usuario -->
+            <div class="perfil-header">
+                <img src="../Imagenes/1.png" alt="Foto de Perfil" class="perfil-foto">
+                <h2>Conchita</h2>
+                <p><strong>Fecha de nacimiento:</strong> 18 de agosto de 2001</p>
+                <p><strong>Correo:</strong> superconchita@hotmail.com</p>
+            </div>
+            <h3>Mis Publicaciones</h3>
+            <!-- Seccion de publicaciones -->
+            <div class="publicacion">
+                <div class="Datos_Usuario">
+                    <img class="imagen-usuario" src="../Imagenes/1.png" alt="Imagen de usuario">
+                    <label id="Nombre_Usuario"> Conchita</label>
+                </div>
+                <div class="publicacion-contenido">
+                    <span>
+                        <h2 id="cat">Escolar</h2>
+                    </span>
+                    <h3>Ayuda con un pago</h3>
+                    <p>Ya realice el pago de una mateira de 4ta portunidad pero no se refleja</p>
+                   
+                </div>
+                <hr class="separador">
+                <div class="interacciones">
+                    <button class="btn-reaccion">
+                        <img src="../Imagenes/like.png" alt="Like"> <span id="num-likes">10</span>
+                    </button>
+                    <button class="btn-comentario">
+                        <img src="../Imagenes/comentario.png" alt="Comentario"> <span
+                            id="num-comentarios">5</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div>
+        <footer>
+            <div class="footer-contenedor">
+                <div class="informacion">
+                    <span><a href="#">Acerca de</a></span>
+                    <span><label> | </label></span>
+                    <span><a href="#">Prensa</a></span>
+                    <span><label> | </label></span>
+                    <span><a href="#">Legal</a></span>
+                    <span><label> | </label></span>
+                    <span><a href="#">Politica de privacidad</a></span>
+                    <span><label> | </label></span>
+                    <span><a href="#">Terminos de servicio</a></span>
+                    <span><label> | </label></span>
+                    <span><a href="#">Politica de las cookies</a></span>
+                    <span><label> | </label></span>
+                </div>
+            </div>
+            <p>&copy; 2024 Pet Pals inc. - Todos los derechos reservados</p>
+        </footer>
+    </div>
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/filtro.js"></script>
+    <script src="../JS/Sign_up.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>PP-Mi perfil</title>
+            <link rel="stylesheet" href="../CSS/EditarUsuario.CSS">
+        </head>
+
+
+        <body>
+            <!-- Navbar -->
+            <header>
+                <nav class="navbar">
+                    <div class="logo">
+                        <img src="../Imagenes/logo2.png" alt="Logo">
+                    </div>
+                    <div class="BUSCADOR">
+                        <button id="boton-filtro">Filtro</button>
+                        <form>
+                            <div id="search-filter" class="search-filter">
+                                <label for="BuscarTexto">Buscar texto:</label>
+                                <input type="text" id="BuscarTexto" name="BuscarTexto" placeholder="Escribe algo...">
+        
+                                <label for="FechaInicial">Desde:</label>
+                                <input type="date" id="FechaInicial" name="FechaInicial">
+        
+                                <label for="FechaFinal">Hasta:</label>
+                                <input type="date" id="FechaFinal" name="FechaFinal">
+        
+                                <label for="categorias">Buscar por categoría:</label>
+                                <select id="categorias" name="categorias">
+                                    <option value="All">Todas</option>
+                                    <option value="CuidadosF">Cuidados</option>
+                                    <option value="EntrenamientoF">Entrenamiento</option>
+                                    <option value="Juguetes y accesoriosF">Juguetes y accesorios</option>
+                                    <option value="AlimentacionF">Alimentación</option>
+                                </select>
+        
+                                <button type="submit">Buscar</button>
+                            </div>
+                        </form>
+                        <input type="text" placeholder="Buscar..." id="buscador" name="buscador">
+                        <button type="submit">Buscar</button>
+                    </div>
+                    <div class="user-profile">
+                        <img src="../Imagenes/1.png" alt="Usuario" style="vertical-align: middle;">
+                        <span style="vertical-align: middle;" id="NombreUsuario">Conchita</span>
+                    </div>
+                    <button id="toggle-menu-btn">☰</button>
+                </nav>
+            </header>
+        
+
+
+            <div class="container">
+                <!-- Menu-->
+                <aside class="sidebar-menu" id="sidebar">
+
+                    <h3 class="sidebar-item">Menu</h3>
+                    <a href="../HTML/Home.html" class="sidebar-button">Home</a>
+                    <br>
+                    <a href="../HTML/Chat.html" class="sidebar-button">Chat</a>
+                    <br>
+                    <a href="../HTML/Usuario.html" class="sidebar-button">Mi perfil</a>
+                    <br>
+                    <a href="../HTML/EditarUsuario.html" class="sidebar-button">Editar perfil</a>
+                    <br>
+                    <a href="../HTML/Tareas.html" class="sidebar-button">Tareas</a>
+                    <br>
+                    <a href="../HTML/Recompensas.html" class="sidebar-button">Recompensas</a>
+                    <br>
+                    <a href="../HTML/Inicio_sesion.html" class="sidebar-button">Cerrar sesion</a>
+                </aside>
+
+
+                <!-- Seccion de publicaciones -->
+                <form action="#" method="post">
+                    <main class="container2">
+                        <div id="fotoUsuario" class="foto-usuario">
+
+                            <img id="imagenUsuario" src="../Imagenes/1.png" alt="Imagen de Usuario">
+                        </div>
+                        <div class="botones">
+                            <button type="button" onclick="cambiarImagen()" id="btn-imagen-prede">Cambiar Imagen
+                                Predeterminada</button>
+                            <br>
+                            <br>
+                            <label for="btn-imagen-agree" class="boton-cargar">Cargar imagen</label>
+                            <input type="file" accept="image/*" onchange="cargarImagenPersonalizada(event)"
+                                id="btn-imagen-agree" style="display: none;">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="Nombre">Nombre(s)</label>
+                            <input type="text" id="Nombre_usuario" name="Nombre_usuario" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="Nombre">Apellido(s)</label>
+                            <input type="text" id="Apellido_usuario" name="Apellido_usuario" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="Nombre">Usuario</label>
+                            <input type="text" id="Nombre_Usuario" name="Nombre_Usuario" readonly>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <label for="fdate" id="label-fecha">Fecha de nacimiento: </label>
+                            <input type="date" id="Fecha_nacimiento" name="Fecha_nacimiento">
+                            <br>
+
+                            <label for="edad_calculada">Edad:</label>
+                            <input type="text" id="edad_calculada" name="edad_calculada" readonly>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label for="fcorreo" id="label-correo">Correo electronico: </label>
+                            <input type="text" id="fnamecorreo" name="fnamecorreo" >
+                            <select id="fcorreo" name="fcorreo">
+                                <option value="@hotmail.com" ${dominioCorreo=='@hotmail.com' ? 'selected' : '' }>
+                                    @hotmail.com</option>
+                                <option value="@outlook.com" ${dominioCorreo=='@outlook.com' ? 'selected' : '' }>
+                                    @outlook.com</option>
+                                <option value="@gmail.com" ${dominioCorreo=='@gmail.com' ? 'selected' : '' }>@gmail.com
+                                </option>
+                                <option value="@yahoo.com" ${dominioCorreo=='@yahoo.com' ? 'selected' : '' }>@yahoo.com
+                                </option>
+                            </select>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <label for="Contraseña">Contraseña:</label>
+                                <input type="password" id="PasswordInput" name="PasswordInput"  required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Contraseña_confirmacion">Confirmar Contraseña:</label>
+                                <input type="password" id="Contraseña_confirma" name="Contraseña_confirma" required>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <button class="boton-continuar" type="submit">Guardar cambios</button>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <form action="#" method="post">
+                                    <button id="Baja_cuenta" type="submit"> Dar de Baja Cuenta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </main>
+                </form>
+            </div>
+         
+            <!--footer-->
+            <div>
+                <footer>
+                    <div class="footer-contenedor">
+                        <div class="informacion">
+                            <span><a href="#">Acerca de</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Prensa</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Legal</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Politica de privacidad</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Terminos de servicio</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Politica de las cookies</a></span>
+                            <span><label> | </label></span>
+                        </div>
+                    </div>
+                    <p>&copy; 2024 Pet Pals inc. - Todos los derechos reservados</p>
+                </footer>
+            </div>
+            <script src="../JS/menu.js"></script>
+            <script src="../JS/filtro.js"></script>
+            <script src="../JS/Sign_up.js"></script>
+        </body>
+
+        </html>

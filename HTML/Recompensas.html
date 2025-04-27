@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>PP-Mi perfil</title>
+            <link rel="stylesheet" href="../CSS/Recompensas.CSS">
+        </head>
+
+
+        <body>
+            <!-- Navbar -->
+            <header>
+                <nav class="navbar">
+                    <div class="logo">
+                        <img src="../Imagenes/logo2.png" alt="Logo">
+                    </div>
+                    <div class="BUSCADOR">
+                        <button id="boton-filtro">Filtro</button>
+                        <form>
+                            <div id="search-filter" class="search-filter">
+                                <label for="BuscarTexto">Buscar texto:</label>
+                                <input type="text" id="BuscarTexto" name="BuscarTexto" placeholder="Escribe algo...">
+        
+                                <label for="FechaInicial">Desde:</label>
+                                <input type="date" id="FechaInicial" name="FechaInicial">
+        
+                                <label for="FechaFinal">Hasta:</label>
+                                <input type="date" id="FechaFinal" name="FechaFinal">
+        
+                                <label for="categorias">Buscar por categoría:</label>
+                                <select id="categorias" name="categorias">
+                                    <option value="All">Todas</option>
+                                    <option value="CuidadosF">Cuidados</option>
+                                    <option value="EntrenamientoF">Entrenamiento</option>
+                                    <option value="Juguetes y accesoriosF">Juguetes y accesorios</option>
+                                    <option value="AlimentacionF">Alimentación</option>
+                                </select>
+        
+                                <button type="submit">Buscar</button>
+                            </div>
+                        </form>
+                        <input type="text" placeholder="Buscar..." id="buscador" name="buscador">
+                        <button type="submit">Buscar</button>
+                    </div>
+                    <div class="user-profile">
+                        <img src="../Imagenes/1.png" alt="Usuario" style="vertical-align: middle;">
+                        <span style="vertical-align: middle;" id="NombreUsuario">Conchita</span>
+                    </div>
+                    <button id="toggle-menu-btn">☰</button>
+                </nav>
+            </header>
+        
+
+
+            <div class="container">
+                <!-- Menu-->
+                <aside class="sidebar-menu" id="sidebar">
+
+                    <h3 class="sidebar-item">Menu</h3>
+                    <a href="../HTML/Home.html" class="sidebar-button">Home</a>
+                    <br>
+                    <a href="../HTML/Chat.html" class="sidebar-button">Chat</a>
+                    <br>
+                    <a href="../HTML/Usuario.html" class="sidebar-button">Mi perfil</a>
+                    <br>
+                    <a href="../HTML/EditarUsuario.html" class="sidebar-button">Editar perfil</a>
+                    <br>
+                    <a href="../HTML/Tareas.html" class="sidebar-button">Tareas</a>
+                    <br>
+                    <a href="../HTML/Recompensas.html" class="sidebar-button">Recompensas</a>
+                    <br>
+                    <a href="../HTML/Inicio_sesion.html" class="sidebar-button">Cerrar sesion</a>
+                </aside>
+
+
+                <!-- Seccion de publicaciones -->
+                <div class="recompensas-container">
+                    <h2>🏆 Mis Recompensas</h2>
+                    <div class="recompensas-grid">
+                        <div class="recompensa">
+                            <img src="../Imagenes/Oro.png" alt="Trofeo 1">
+                            <h3>Maestro de HTML</h3>
+                            <p>Otorgado por completar el curso de HTML.</p>
+                        </div>
+                        <div class="recompensa">
+                            <img src="../Imagenes/Plata.png" alt="Trofeo 2">
+                            <h3>10 Publicaciones</h3>
+                            <p>Otorgado por realizar 10 publicaciones en la plataforma.</p>
+                        </div>
+                        <div class="recompensa">
+                            <img src="../Imagenes/Bronce.png" alt="Trofeo 3">
+                            <h3>Primer Amigo</h3>
+                            <p>Otorgado por agregar tu primer amigo.</p>
+                        </div>
+                    </div>
+        
+                    <h2>🌍 Recompensas de Otros Usuarios</h2>
+                    <div class="recompensas-grid">
+                        <div class="recompensa">
+                            <img src="../Imagenes/Oro.png" alt="Trofeo 4">
+                            <h2>Juanito</h2>
+                            <h3>Publicador Experto</h3>
+                            <p>Usuario Juan Pérez ha conseguido 50 publicaciones.</p>
+                        </div>
+                        <div class="recompensa">
+                            <img src="../Imagenes/Bronce.png" alt="Trofeo 5">
+                            <h2>Pamela</h2>
+                            <h3>Socializador</h3>
+                            <p>Usuario María López ha conseguido 20 amigos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+            <!--footer-->
+            <div>
+                <footer>
+                    <div class="footer-contenedor">
+                        <div class="informacion">
+                            <span><a href="#">Acerca de</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Prensa</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Legal</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Politica de privacidad</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Terminos de servicio</a></span>
+                            <span><label> | </label></span>
+                            <span><a href="#">Politica de las cookies</a></span>
+                            <span><label> | </label></span>
+                        </div>
+                    </div>
+                    <p>&copy; 2024 Pet Pals inc. - Todos los derechos reservados</p>
+                </footer>
+            </div>
+            <script src="../JS/menu.js"></script>
+            <script src="../JS/filtro.js"></script>
+            <script src="../JS/Sign_up.js"></script>
+        </body>
+
+        </html>

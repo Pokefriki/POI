@@ -1,0 +1,369 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------------Navbar-----------------------*/
+header {
+    background-color: #2393fc;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #2393fc;
+    color: white;
+    padding: 10px 20px;
+    z-index: 100;
+    justify-content: center;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.logo img {
+    width: 150px;
+    margin-left: 45px;
+}
+
+.BUSCADOR {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+}
+
+.BUSCADOR input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.BUSCADOR button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4267B2;
+    color: white;
+    cursor: pointer;
+}
+
+.user-profile{
+    margin-right: 20px;
+    
+}
+
+.user-profile img {
+    width: 40px;
+    border-radius: 50%;
+   
+}
+
+
+
+.container {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    overflow-y: auto;
+    margin-left: 220px; 
+    padding: 20px; 
+}
+
+
+.filter-button,
+.search-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4267B2;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-filter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+
+
+/*---------------------------------------------------*/
+/*------------------------MENU-----------------------*/
+#toggle-menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #2393fc;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 101;
+    border-radius: 5px;
+}
+
+.sidebar-menu {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #2393fc;
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-button {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-hidden {
+    transform: translateX(-220px);
+}
+
+.content-expanded {
+    margin-left: 20px !important;
+}
+
+.sidebar-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/*---------------------------------------------------*/
+/*-----------------------Footer-----------------------*/
+footer {
+    background-color: #969696;
+    color: #fff;
+    padding: 20px;
+    position: flex;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .footer-contenedor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .informacion{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  span {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-item{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-item img {
+    width: 50px; 
+    height: 50px;
+    object-fit: cover;
+    text-align: right;
+    border-radius: 50%; 
+    margin-right: 10px;
+  }
+  
+  .footer-item h3 {
+    margin: 0px;
+    font-size: 14px;
+  }
+  
+  p{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+
+/*---------------------------------------------------*/
+/*----------------------Usuario---------------------*/
+
+.container2 {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-left: 300px;
+    margin-top: 60px;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+input[type="text"],
+input[type="password"] {
+    width: 92%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+.button-secondary {
+    width: fit-content;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button-secondary:hover {
+    background-color: #0056b3;
+}
+
+.foto-usuario {
+    text-align: center;
+}
+
+.foto-usuario img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.foto-usuario .botones button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.foto-usuario .botones input[type="file"] {
+    display: none;
+}
+
+#label-fecha {
+    display: inline-block;
+    width: 200px;
+    margin-right: 10px;
+}
+
+input[type="date"] {
+    width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#label-correo {
+    display: inline-block;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#fnamecorreo {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+#fcorreo {
+    width: 130px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#btn-imagen-prede {
+    padding: 10px;
+    background-color: #8804e0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-cargar {
+    width: 197px;
+    padding: 10px;
+    background-color: #8804e0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[readonly] {
+    background-color: #d3d3d3; 
+    color: #6c757d; 
+    border: 1px solid #ced4da; 
+    cursor: not-allowed; 
+}
+
+#Baja_cuenta{
+    background-color: red; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+}
